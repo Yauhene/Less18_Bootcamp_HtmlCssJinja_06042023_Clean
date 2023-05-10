@@ -1,7 +1,22 @@
-﻿from flask import Flask, render_template
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
 
+<style>
+    html{
+        background-color:rgb(77, 171, 43)
+    }
+</style>
 
-app = Flask(__name__)
+{% block content %}
+<body>
 
-@app.route('/')
-def main():
+<h3><a href="/login">Авторизация</a></h3>
+<h3><a href="/register">Регистрация</a></h3>
+{% endblock %}
+
+</body>
+</html>

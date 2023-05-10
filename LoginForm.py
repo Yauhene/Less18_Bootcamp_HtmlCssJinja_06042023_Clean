@@ -11,4 +11,3 @@ class Lf(FlaskForm):
     remember_me = BooleanField('Запомнить меня')
     submit = SubmitField("Зарегистрироваться")
 
-    
