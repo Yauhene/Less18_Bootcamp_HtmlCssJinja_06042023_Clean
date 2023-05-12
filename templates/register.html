@@ -3,7 +3,7 @@
 
 {% block content %}
 
-
+{% if form %}
 
 <form action="" method="post">
     {{ form.csrf_token }}
@@ -25,6 +25,12 @@
     {{ form.remember_me() }}
     <br>
     {{ form.submit() }}
+{% endif %}
+{% if message == 'Регистрация прошла успешно' %}
+
+    {{ message }}
+    <a href="/log">Авторизация</a>
+{% endif %}
 
 
 
